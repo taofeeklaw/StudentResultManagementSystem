@@ -14,7 +14,7 @@ public class StudentResultManagementSyatem {
         Scanner inputScanner = new Scanner(System.in);
 
         System.out.println("What is your Name");
-        studentName = inputScanner.next();
+        studentName = inputScanner.nextLine();
         System.out.println("Input your score in Mathematics");
         while (true) {
             while (!inputScanner.hasNextDouble()) {
@@ -103,15 +103,25 @@ public class StudentResultManagementSyatem {
             status = "FAIL";
         }
 
-        System.out.println("Student name: " + studentName);
-        System.out.println("Your Mathematics Score is: " + firstSubject);
-        System.out.println("Your English Score is: " + secondSubject);
-        System.out.println("Your Physics Score is: " + thirdSubject);
-        System.out.println("Your Chemistry Score is: " + fourthSubject);
-        System.out.println("Your Biology Score is: " + fifthSubject);
-        System.out.println("Total Score = " + totalScore + "/500");
-        System.out.println("Average = " + average + "%");
-        System.out.println("Grade = " + grade);
-        System.out.println("Status = " + status);
+        
+System.out.println("========================================");
+System.out.println("       STUDENT RESULT REPORT");
+System.out.println("========================================");
+System.out.println("Student Name : " + studentName);
+System.out.println();
+System.out.printf("%-22s %s%n", "SUBJECT", "SCORE");
+System.out.println("----------------------------------------");
+System.out.printf("%-22s %6.0f%n", "Mathematics", firstSubject);
+System.out.printf("%-22s %6.0f%n", "English Language", secondSubject);
+System.out.printf("%-22s %6.0f%n", "Physics", thirdSubject);
+System.out.printf("%-22s %6.0f%n", "Chemistry", fourthSubject);
+System.out.printf("%-22s %6.0f%n", "Biology", fifthSubject);
+System.out.println("----------------------------------------");
+System.out.printf("%-22s %.0f / 500%n", "Total Score", totalScore);
+System.out.printf("%-22s %.2f%%%n", "Average", average);
+System.out.println("Grade                " + grade);
+System.out.println("Status               " + status);
+System.out.println("========================================");
+
     }
 }
